@@ -10,8 +10,22 @@ Each skill is a self-contained Python script that automates the entire mining se
 
 | Subnet | Script | Difficulty | Hardware |
 |--------|--------|-----------|----------|
+| SN2 dSperse | `sn2_dsperse.py` | Hard | GPU 24GB+ |
+| SN6 Numinous | `sn6_numinous.py` | Easy | CPU only |
+| SN9 IOTA | `sn9_iota.py` | Hard | GPU 24GB+ |
+| SN13 Data Universe | `sn13_datauniverse.py` | Easy | CPU only |
+| SN18 Zeus | `sn18_zeus.py` | Medium | GPU 4GB+ |
+| SN25 Mainframe | `sn25_mainframe.py` | Medium | CPU only |
+| SN38 Sylliba | `sn38_sylliba.py` | Medium | CPU/GPU |
+| SN44 ScoreVision | `sn44_score.py` | Medium | GPU 4GB+ |
+| SN50 Synth | `sn50_synth.py` | Medium | CPU only |
+| SN64 Chutes | `sn64_chutes.py` | Hard | GPU + K3s |
+| SN65 TPN | `sn65_tpn.py` | Easy | CPU only |
+| SN68 Metanova | `sn68_metanova.py` | Hard | CPU/GPU |
 | SN72 StreetVision | `sn72_streetvision.py` | Medium | GPU 4GB+ |
-| *More coming...* | | | |
+| SN88 Investing | `sn88_investing.py` | Easy | CPU only |
+| SN103 Djinn | `sn103_djinn.py` | Medium | CPU only |
+| SN107 Minos | `sn107_minos.py` | Easy | CPU only |
 
 ## Usage
 
