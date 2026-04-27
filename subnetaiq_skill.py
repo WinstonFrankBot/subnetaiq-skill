@@ -149,6 +149,28 @@ def find_best_mining_opportunity(gpu_vram_gb: int = 32) -> list:
     return suitable
 
 
+def get_mineability(netuid: int = None) -> dict:
+    """Check if a subnet is worth mining BEFORE you deploy.
+
+    Scores subnets 0-100 based on on-chain data:
+    - earning_ratio: what % of miners actually earn
+    - concentration: is one miner taking everything? (Gini coefficient)
+    - emission: how much TAO flows to the subnet daily
+    - reg_cost: how much it costs to register
+
+    Verdict: MINE (60+) / CAUTION (35-59) / AVOID (0-34)
+
+    Args:
+        netuid: specific subnet to check, or None for all tracked subnets
+
+    Returns:
+        dict with score, verdict, earning_ratio, top1_share, reason
+    """
+    if netuid:
+        return _get(f"mineability/{netuid}")
+    return _get("mineability")
+
+
 def get_bullish_subnets(min_score: float = 10.0) -> list:
     """Get subnets with strong positive momentum.
 
@@ -194,12 +216,14 @@ SKILL_INFO = {
         "whale_tracking",
         "institutional_flows",
         "mining_directory",
+        "mineability_scoring",
     ],
     "functions": [
         "get_subnet", "get_all_subnets", "get_momentum_scores",
         "get_top_subnets", "get_whale_flows", "get_mining_directory",
         "get_institutional_players", "check_health",
         "find_best_mining_opportunity", "get_bullish_subnets", "get_bearish_subnets",
+        "get_mineability",
     ],
 }
 

@@ -2,7 +2,7 @@
 
 **The ONLY open, agent-friendly API for Bittensor (TAO) subnet analytics.**
 
-128 subnets tracked. 100 GitHub repos monitored. 15 institutional players. Proprietary momentum scoring. Free tier.
+128 subnets tracked. 100 GitHub repos monitored. 15 institutional players. Proprietary momentum scoring. **Mineability intelligence — know BEFORE you deploy.** Free tier.
 
 ## Quick Start
 ```bash
@@ -20,8 +20,9 @@ curl https://subnetaiq.io/api/v1/health
 | **Twitter Sentiment** | 13 subnets via SN13 Data Universe |
 | **Mining Skills** | "How to use" + "How to mine" for 14 subnets |
 | **Whale Flows** | Large position changes + institutional movements |
+| **Mineability Scores** | 0-100 score per subnet — earning ratio, concentration, verdict (MINE/CAUTION/AVOID) |
 
-## 13 API Endpoints
+## 14 API Endpoints
 
 | Endpoint | Description |
 |----------|-------------|
@@ -37,6 +38,7 @@ curl https://subnetaiq.io/api/v1/health
 | `/api/v1/skills` | Subnet skill directory |
 | `/api/v1/skills/{id}` | Per-subnet use + mine instructions |
 | `/api/v1/mining-directory` | Hardware requirements + setup |
+| `/api/v1/mineability` | Should you mine this subnet? Score + verdict |
 | `/api/v1/pricing` | Tier pricing for agents |
 
 ## Install
